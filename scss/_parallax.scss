@@ -1,0 +1,78 @@
+// Background Bulldog image of parallax 
+.bg-img {
+    background-image: url(../assets/bulldog.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    min-height: 600px;
+}
+
+// Sub Grid inside grid-child-5
+.grid-parallax {
+    @include display-grid;
+    grid-template-columns: 50% 50%;
+    &__child {
+        @include basic-child;
+        &-1 {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        &-2 {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+    }
+    // Right side titles
+    &__title {
+        @include basic-title;
+        position: relative;
+        font-weight: bold;
+        font-size: $font-size-large;
+        top: 50%;
+        margin-bottom: 10px;
+        width: 85%;
+    }
+    &__subtitle {
+        @include basic-title;
+        position: relative;
+        font-size: $font-size-small;
+        top: 50%;
+    }
+    // Left side form
+    &__form {
+        background-color: $color-theme;
+        position: relative;
+        display: block;
+        top: calc(50% - 12px);
+        padding: 10px 20px 10px 10px;
+        width: 50%;
+        float: left;
+        &-input {
+            float: left;
+            border: none;
+            padding-right: 25px;
+            margin-bottom: 10px;
+            width: 95%;
+            height: 60px;
+            font-family: Alef;
+            font-size: $font-size-very-small;
+            background-color: #ffffff;
+            color: $color-gray;
+        }
+        &-submit {
+            padding: 0;
+            display: block;
+            float: left;
+            padding: 0 50px;
+            height: 60px;
+            font-weight: bold;
+            font-size: $font-size-large;
+            text-align: center;
+            background-color: #ffffff;
+            color: $color-gray;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}

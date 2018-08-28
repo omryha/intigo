@@ -1,0 +1,17 @@
+// Grid layout mixins
+@mixin display-grid {
+    display: grid;
+    display: -ms-grid;
+}
+
+@mixin basic-child {
+    height: 100%;
+    width: 100%;
+}
+
+// Standard title 
+@mixin basic-title {
+    padding: 0 20px;
+    color: #ffff;
+    background-color: $color-theme;
+}

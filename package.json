@@ -1,0 +1,20 @@
+{
+    "name": "job_application_assignment",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "compile-scss": "node-sass scss/main.scss css/style.css -w"
+    },
+    "author": "omry_hazut",
+    "license": "ISC",
+    "dependencies": {
+        "autoprefixer": "^9.1.1",
+        "node-sass": "^4.9.3",
+        "postcss-cli": "^6.0.0"
+    },
+    "devDependencies": {
+        "font-awesome": "^4.7.0"
+    }
+}

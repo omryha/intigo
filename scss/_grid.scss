@@ -1,0 +1,94 @@
+%grid-child {
+    @include basic-child;
+    background-color: $color-theme;
+}
+
+.grid-parent {
+    @include display-grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-row-gap: 5px;
+}
+
+.grid-child-1 {
+    @extend %grid-child;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 80%;
+}
+
+.grid-child-2 {
+    @extend %grid-child;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 0;
+    direction: ltr;
+    float: left;
+    width: 100%;
+    height: 80%;
+    z-index: 50000;
+}
+
+.grid-child-3 {
+    @extend %grid-child;
+    grid-column: 3/4;
+    grid-row: 1/2;
+    height: 80%;
+}
+
+.grid-child-4 {
+    @include basic-child;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.grid-child-5 {
+    @include basic-child;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    z-index: 1;
+    margin-top: -20px;
+}
+
+.grid-child-6 {
+    @include basic-child;
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.grid-child-7 {
+    @extend %grid-child;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.grid-child-8 {
+    @extend %grid-child;
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.grid-child-9 {
+    @extend %grid-child;
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+.grid-child-10 {
+    @include basic-child;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    color: black;
+    background-color: #fff;
+}
+
+.grid-child-11 {
+    @include basic-child;
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.grid-child-12 {
+    @include basic-child;
+    grid-column: 3/4;
+    grid-row: 4/5;
+}

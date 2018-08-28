@@ -1,0 +1,29 @@
+.slider {
+    color: #ffff;
+    //Move left and Move right arrows
+    &__chevron {
+        display: inline-block;
+        position: absolute;
+        font-size: $font-size-x-large;
+        cursor: pointer;
+        &-right {
+            left: 78%;
+        }
+        &-left {
+            right: 78%;
+        }
+    }
+    //Sliding text
+    &__message {
+        text-align: center;
+        padding: 50px 200px;
+        font-size: $font-size-very-small;
+        &-author {
+            margin-top: 20px;
+            text-align: center;
+            font-style: italic;
+            font-size: 20pt;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+}
